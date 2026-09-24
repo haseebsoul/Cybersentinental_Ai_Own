@@ -1,0 +1,311 @@
+/* ================================
+   CyberSentinel-AI Navbar
+   Light Cyber Glass Design
+================================ */
+
+.cyber-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+
+  width: 100%;
+  min-height: 74px;
+
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(14, 165, 233, 0.16);
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ================================
+   Brand
+================================ */
+
+.cyber-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+
+  color: #0f172a !important;
+
+  text-decoration: none;
+
+  transition: transform 0.25s ease;
+}
+
+.cyber-brand:hover {
+  transform: translateY(-1px);
+}
+
+
+/* Cyber Shield Icon */
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.35rem;
+  height: 2.35rem;
+
+  border-radius: 0.75rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14, 165, 233, 0.16),
+      rgba(99, 102, 241, 0.12)
+    );
+
+  border: 1px solid rgba(14, 165, 233, 0.18);
+
+  box-shadow:
+    0 6px 18px rgba(14, 165, 233, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+
+/* ================================
+   Navigation Links
+================================ */
+
+.cyber-nav {
+  gap: 0.35rem;
+}
+
+.cyber-link {
+  position: relative;
+
+  color: #475569 !important;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  padding: 0.65rem 0.95rem !important;
+
+  border-radius: 0.7rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* Small cyber indicator */
+
+.cyber-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 4px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #0ea5e9,
+    #6366f1
+  );
+
+  transform: translateX(-50%);
+
+  transition: width 0.25s ease;
+}
+
+
+/* Hover */
+
+.cyber-link:hover,
+.cyber-link:focus {
+  color: #0f172a !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14, 165, 233, 0.08),
+      rgba(99, 102, 241, 0.07)
+    );
+
+  transform: translateY(-1px);
+}
+
+.cyber-link:hover::after,
+.cyber-link:focus::after {
+  width: 24px;
+}
+
+
+/* ================================
+   Get Started Button
+================================ */
+
+.cyber-btn {
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a 0%,
+      #0369a1 45%,
+      #6366f1 100%
+    );
+
+  border: none;
+
+  color: #ffffff !important;
+
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  padding: 0.72rem 1.3rem;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 10px 25px rgba(14, 165, 233, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.cyber-btn:hover,
+.cyber-btn:focus {
+  color: #ffffff !important;
+
+  transform: translateY(-2px);
+
+  filter: brightness(1.06);
+
+  box-shadow:
+    0 14px 30px rgba(14, 165, 233, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+
+/* ================================
+   Mobile Toggle
+================================ */
+
+.cyber-toggler {
+  border: 1px solid rgba(14, 165, 233, 0.20);
+
+  border-radius: 0.7rem;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.05);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cyber-toggler:hover {
+  background: rgba(14, 165, 233, 0.06);
+}
+
+.cyber-toggler:focus {
+  box-shadow:
+    0 0 0 0.2rem rgba(14, 165, 233, 0.16);
+}
+
+
+/* Bootstrap hamburger icon */
+
+.cyber-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(15,23,42,1)' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* ================================
+   Mobile Navbar
+================================ */
+
+@media (max-width: 991.98px) {
+
+  .cyber-navbar {
+    min-height: 68px;
+  }
+
+  .navbar-collapse {
+    margin-top: 0.75rem;
+
+    padding: 0.75rem;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(14, 165, 233, 0.12);
+
+    border-radius: 1rem;
+
+    box-shadow:
+      0 15px 35px rgba(15, 23, 42, 0.08);
+  }
+
+  .cyber-nav {
+    gap: 0.25rem;
+    padding-top: 0;
+  }
+
+  .cyber-link {
+    width: 100%;
+    padding: 0.7rem 0.85rem !important;
+  }
+
+  .cyber-link::after {
+    display: none;
+  }
+
+  .cyber-btn {
+    width: 100%;
+    margin-top: 0.75rem;
+
+    text-align: center;
+  }
+}
+
+
+/* ================================
+   Brand Animation
+================================ */
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
