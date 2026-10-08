@@ -1,0 +1,147 @@
+.scenario-tab-panel {
+  width: 100%;
+}
+
+.scenario-header {
+  margin-bottom: 30px;
+}
+
+.scenario-eyebrow {
+  color: #2563eb;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.scenario-header h1 {
+  margin: 8px 0 10px;
+  color: #17233c;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.scenario-header p {
+  max-width: 760px;
+  margin: 0;
+  color: #69788c;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.scenario-card {
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 50px rgba(31, 55, 86, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.scenario-card-heading {
+  margin-bottom: 24px;
+}
+
+.scenario-card-heading h2 {
+  margin: 0 0 5px;
+  color: #17233c;
+  font-size: 1.15rem;
+}
+
+.scenario-card-heading p {
+  margin: 0;
+  color: #7a8799;
+  font-size: 0.82rem;
+}
+
+.scenario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.scenario-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scenario-field label {
+  color: #344054;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.scenario-field input,
+.scenario-field select,
+.scenario-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #d9e2ec;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #17233c;
+  font-size: 0.85rem;
+}
+
+.scenario-field textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.scenario-field input:focus,
+.scenario-field select:focus,
+.scenario-field textarea:focus {
+  border-color: #4c8df6;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.scenario-message {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.scenario-message-error {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #b42318;
+}
+
+.scenario-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.scenario-record-count {
+  color: #7a8799;
+  font-size: 0.78rem;
+}
+
+.scenario-record-count strong {
+  color: #344054;
+}
+
+@media (max-width: 700px) {
+  .scenario-card {
+    padding: 22px;
+  }
+
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scenario-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

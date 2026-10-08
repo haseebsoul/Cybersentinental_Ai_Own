@@ -1,30 +1,37 @@
-  import "./Hero.css";
+import { Link } from "react-router";
+
+import "./Hero.css";
 
 const features = [
   {
     icon: "🛡️",
     title: "Web Application Firewall",
-    description: "Inspect and protect web requests against common application attacks.",
+    description:
+      "Inspect and protect web requests against common application attacks.",
   },
   {
     icon: "⚡",
     title: "Real-Time Threat Detection",
-    description: "Identify suspicious requests and security threats as they happen.",
+    description:
+      "Identify suspicious requests and security threats as they happen.",
   },
   {
     icon: "🤖",
     title: "AI-Based Anomaly Detection",
-    description: "Detect unusual behavior using intelligent anomaly analysis.",
+    description:
+      "Detect unusual behavior using intelligent anomaly analysis.",
   },
   {
     icon: "📊",
     title: "SOC Security Dashboard",
-    description: "Monitor security events and threat activity from one interface.",
+    description:
+      "Monitor security events and threat activity from one interface.",
   },
   {
     icon: "🔍",
     title: "IP Risk & Security Analysis",
-    description: "Analyze IP activity and identify potentially risky sources.",
+    description:
+      "Analyze IP activity and identify potentially risky sources.",
   },
 ];
 
@@ -35,25 +42,34 @@ function Hero() {
         <div className="row align-items-center g-4">
           <div className="col-lg-6">
             <div className="hero-badge">AI-POWERED WEB SECURITY</div>
-            <h1 className="hero-title">Protect. Detect. Analyze.</h1>
+
+            <h1 className="hero-title">
+              Protect. Detect. Analyze.
+            </h1>
+
             <p className="hero-text">
-              CyberSentinel-AI is an intelligent Web Application Firewall and
-              Intrusion Detection System designed to detect threats, analyze
-              suspicious behavior, and help secure modern web applications.
+              CyberSentinel-AI is an intelligent Web Application
+              Firewall and Intrusion Detection System designed to
+              detect threats, analyze suspicious behavior, and help
+              secure modern web applications.
             </p>
 
             <div className="hero-actions">
-              <a href="#get-started" className="btn hero-primary">
+              <Link to="/login" className="btn hero-primary">
                 Get Started
-              </a>
-              <a href="#features" className="btn hero-secondary">
+              </Link>
+
+              <Link to="/login" className="btn hero-secondary">
                 Explore Features
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="col-lg-6">
-            <div className="hero-panel" aria-label="Cybersecurity overview panel">
+            <div
+              className="hero-panel"
+              aria-label="Cybersecurity overview panel"
+            >
               <div className="panel-header">
                 <span className="status-dot"></span>
                 <span>Threat Monitoring</span>
@@ -64,6 +80,7 @@ function Hero() {
                   <small>Blocked</small>
                   <strong>2,340</strong>
                 </div>
+
                 <div className="metric-box accent">
                   <small>Threats</small>
                   <strong>18</strong>
@@ -73,20 +90,32 @@ function Hero() {
               <div className="signal-card">
                 <div className="signal-row">
                   <span>Firewall</span>
-                  <span className="signal-good">99.8%</span>
+                  <span className="signal-good">
+                    99.8%
+                  </span>
                 </div>
+
                 <div className="progress-bar">
-                  <span className="progress-fill" aria-hidden="true"></span>
+                  <span
+                    className="progress-fill"
+                    aria-hidden="true"
+                  ></span>
                 </div>
               </div>
 
               <div className="signal-card light">
                 <div className="signal-row">
                   <span>Detection</span>
-                  <span className="signal-good">96.4%</span>
+                  <span className="signal-good">
+                    96.4%
+                  </span>
                 </div>
+
                 <div className="progress-bar alt">
-                  <span className="progress-fill alt-fill" aria-hidden="true"></span>
+                  <span
+                    className="progress-fill alt-fill"
+                    aria-hidden="true"
+                  ></span>
                 </div>
               </div>
             </div>
@@ -95,10 +124,17 @@ function Hero() {
 
         <div className="feature-grid" id="features">
           {features.map((feature) => (
-            <article className="feature-card" key={feature.title}>
-              <div className="feature-icon" aria-hidden="true">
+            <article
+              className="feature-card"
+              key={feature.title}
+            >
+              <div
+                className="feature-icon"
+                aria-hidden="true"
+              >
                 {feature.icon}
               </div>
+
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
             </article>

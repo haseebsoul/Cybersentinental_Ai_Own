@@ -1,0 +1,202 @@
+.ip-module {
+  animation: adminModuleEnter 0.28s ease;
+}
+
+.ip-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(14, 165, 233, 0.10);
+  border-radius: 1rem;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(14, 165, 233, 0.07),
+      transparent 30%
+    ),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+}
+
+.panel-kicker {
+  color: #0ea5e9;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.ip-hero h2 {
+  margin: 0.25rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.ip-hero p {
+  max-width: 620px;
+  margin: 0.45rem 0 0;
+  color: #64748b;
+  font-size: 0.7rem;
+}
+
+.ip-search {
+  width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.ip-search span {
+  color: #94a3b8;
+}
+
+.ip-search input {
+  width: 100%;
+  height: 42px;
+  border: 0;
+  outline: 0;
+  font-size: 0.7rem;
+}
+
+.ip-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.ip-summary-grid > div {
+  padding: 1rem;
+  border: 1px solid rgba(14, 165, 233, 0.10);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
+}
+
+.ip-summary-grid span,
+.ip-summary-grid strong {
+  display: block;
+}
+
+.ip-summary-grid span {
+  color: #94a3b8;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.ip-summary-grid strong {
+  margin-top: 0.3rem;
+  color: #0f172a;
+  font-size: 1.35rem;
+}
+
+.ip-table-panel {
+  overflow: hidden;
+  border: 1px solid rgba(14, 165, 233, 0.10);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+}
+
+.ip-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 0.85rem;
+}
+
+.ip-table-header h2 {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.ip-export-button {
+  border: 0;
+  border-radius: 0.7rem;
+  background: #0f172a;
+  color: #fff;
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.ip-export-button:hover {
+  color: #fff;
+  background: #0369a1;
+}
+
+.ip-primary strong,
+.ip-primary span {
+  display: block;
+}
+
+.ip-primary strong {
+  color: #0f172a;
+  font-size: 0.69rem;
+}
+
+.ip-primary span {
+  margin-top: 0.16rem;
+  color: #94a3b8;
+  font-size: 0.56rem;
+}
+
+.ip-risk-cell strong {
+  color: #0f172a;
+  font-size: 0.67rem;
+}
+
+.risk-mini-track {
+  width: 62px;
+  height: 4px;
+  margin-top: 0.3rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
+.risk-mini-track span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0ea5e9, #ef4444);
+}
+
+@keyframes adminModuleEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .ip-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ip-search {
+    width: 100%;
+  }
+
+  .ip-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .ip-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

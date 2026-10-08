@@ -17,7 +17,7 @@ const processSteps = [
     icon: "🛡️",
     title: "Respond",
     description:
-      "Threats can be blocked or flagged while security events are recorded for monitoring.",
+      "Threats c gan be blocked or flagged while security events are recorded for monitoring.",
   },
 ];
 
